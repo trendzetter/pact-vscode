@@ -64,7 +64,7 @@
                 },
                 "pact.server": {
                     "type": "string",
-                    "default": "pact-lsp",
+                    "default": "pact",
                     "description": "Path to the Pact LSP executable (pact-lsp)",
                     "scope": "window"
                 }
