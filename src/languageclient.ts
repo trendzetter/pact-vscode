@@ -13,18 +13,17 @@ export class PactLanguageClient {
     private client: LanguageClient;
     public constructor() {
         // LSP Config
-        const serverModule: string = vscode.workspace.getConfiguration().get('pact.server')!;
         const pact: string = vscode.workspace.getConfiguration().get('pact.executable')!;
 
         // If the extension is launched in debug mode then the debug server options are used
         // Otherwise the run options are used
         const serverOptions: ServerOptions = {
             run: {
-                command: serverModule,
+                command: pact,
                 args: ['--lsp']
             },
             debug: {
-                command: serverModule,
+                command: pact,
                 args: ['--lsp']
             }
         };
