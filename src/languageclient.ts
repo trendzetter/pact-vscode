@@ -20,14 +20,12 @@ export class PactLanguageClient {
         // Otherwise the run options are used
         const serverOptions: ServerOptions = {
             run: {
-                transport: TransportKind.stdio,
                 command: serverModule,
-                //	options: {cwd: 'pact-lsp/pact-lsp/result/bin'}
+                args: ['--lsp']
             },
             debug: {
-                transport: TransportKind.stdio,
                 command: serverModule,
-                //	options: {cwd: 'pact-lsp/result/bin'}
+                args: ['--lsp']
             }
         };
 
